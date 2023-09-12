@@ -11,7 +11,7 @@ let favMovies= [
   },
   {
     id: "3",
-    names: "Passion fruit",
+    names: "Passionfruit",
     kg: "3kg",
   },
   {
@@ -59,18 +59,18 @@ let favMovies= [
     const id = `${movie['id']}`
     div.setAttribute('id', id)
     // title
-    const h2 = document.createElement('h2')
-    h2.innerText = movie['names'];
     const h3 = document.createElement('h3')
-    h3.innerText = movie['kg']
+    h3.innerText = movie['names'];
+    const h4 = document.createElement('h4')
+    h4.innerText = movie['kg']
     const button = document.createElement("button");
     button.innerText = "delete";
-    div.setAttribute('id','btn')
+    button.setAttribute('id','btn')
     button.addEventListener('click', function(){
     div.remove();
 })
-    div.appendChild(h2)
     div.appendChild(h3)
+    div.appendChild(h4)
     div.appendChild(button);
     return div;
   }
